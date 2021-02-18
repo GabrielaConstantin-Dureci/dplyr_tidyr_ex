@@ -1,0 +1,49 @@
+library(tidyverse)
+
+mtcars %>% glimpse()
+
+mtcars %>% select()
+select(mtcars)
+#these are equivalent
+
+
+select(mtcars, mpg, drat, cyl)
+select (mtcars, am:carb) #use colon to get stuff in between two variables
+select(mtcars, hello_world = mpg) #to rename a variable use equal sign
+
+select(mtcars, starts_with("d")) # to choose something that has a common element
+
+
+#To FILTER stuff
+
+filter(mtcars, mpg < 20 & mpg > 14) #filter rows in which mpg is less than 20 and greater than 14
+filter(mtcars, cyl == 6) #filter rows in which cyl is equal to 6
+filter(mtcars, mpg > 20 | disp<200) # filter rows in which mpg is greater than 20 or disp is less that 200
+
+mtcars %>% 
+select(mpg) %>% 
+mutate(., mpg_x2 = mpg * 2)
+
+
+#create a new column called mpg_c that centers the mpg data by subtracting the mean value of mpg from every value in the dataframe
+mtcars %>% 
+  select(mpg) %>% 
+  mutate(., mpg_c = mpg - mean(mpg))
+
+
+mtcars %>% 
+  select(mpg) %>% 
+  mutate(., value = if_else(mpg <= 18, "good", "bad")) # create a column where 
+
+#summarizing
+mtcars %>% 
+  summarize(., mean_mpg=mean(mpg)) # calculate the mean value of mpg
+
+mtcars %>% 
+  group_by(.,cyl) %>% 
+  summarize(., mean_mpg=mean(mpg))
+
+mtcars %>% 
+  group_by(.,cyl) %>% 
+  summarize(., mean_mpg=mean(mpg), sd_mpg=sd(mpg), min_mpg = min(mpg), max_mg=max(mpg))
+#calculate the 

@@ -1,0 +1,27 @@
+{
+    "id": "77BE39AF",
+    "path": "C:/Users/gcons/Desktop/dplyr_data wrangle/dplyr_example.R",
+    "project_path": "dplyr_example.R",
+    "type": "r_source",
+    "hash": "1464772198",
+    "contents": "",
+    "dirty": false,
+    "created": 1613056632492.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "48,15",
+        "scrollLine": "25"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1613059646,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1613059646950,
+    "read_only": false,
+    "read_only_alternatives": []
+}
